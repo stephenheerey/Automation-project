@@ -11,6 +11,7 @@ export class InventoryPage {
   readonly onesieAddToCart: Locator;
   readonly redShirtAddToCart: Locator;
   readonly cartItemsCount: Locator;
+  readonly cartBuyNow: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -23,14 +24,19 @@ export class InventoryPage {
     this.onesieAddToCart = page.locator('[data-test="add-to-cart-sauce-labs-onesie"]');
     this.redShirtAddToCart = page.locator('[data-test="add-to-cart-test.allthethings()-t-shirt-(red)"]');
     this.cartItemsCount = page.locator('[data-test="shopping-cart-badge"]');
+    this.cartBuyNow = page.locator('[data-test="shopping-cart-link"]');
   }
 
   async addBagToInventory(){
-    this.backpackAddToCart.click();
+    await this.backpackAddToCart.click();
   }
 
   async removeBagFromInventory(){
-    this.backpackRemoveFromCart.click();
+    await this.backpackRemoveFromCart.click();
+  }
+
+  async clickOnCart(){
+    await this.cartBuyNow.click();
   }
 
   async addAllToInventory(){
