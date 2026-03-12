@@ -2,8 +2,7 @@ import { test, expect } from '@playwright/test';
 import { LoginPage } from '../pages/LoginPage';
 import { InventoryPage } from '../pages/InventoryPage';
 import { users } from '../utils/testData';
-import { CartPage } from '../pages/cartPage';
-import { CheckoutPage } from '../pages/checkoutPage';
+import { CartPage } from '../pages/CartPage';
 import { CheckoutDetailsPage } from '../pages/CheckoutDetailsPage';
 import { CheckoutSummaryPage } from '../pages/CheckoutSummaryPage';
 
