@@ -4,7 +4,7 @@ import { InventoryPage } from '../pages/InventoryPage';
 import { CartPage } from '../pages/CartPage';
 import { users } from '../utils/testData';
 
-test.describe('Login', () => {
+test.describe('Cart', () => {
 
     test.beforeEach(async ({ page }) => {
         const loginPage = new LoginPage(page);

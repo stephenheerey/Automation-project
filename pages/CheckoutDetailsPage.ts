@@ -6,7 +6,7 @@ export class CheckoutDetailsPage {
     readonly lastNameInput: Locator;
     readonly postalCodeInput: Locator;
     readonly continueButton: Locator;
-    readonly finishButton: Locator;
+    readonly cancelButton: Locator;
     
 
     constructor(page: Page) {
@@ -15,7 +15,7 @@ export class CheckoutDetailsPage {
         this.lastNameInput = page.locator('[data-test="lastName"]');
         this.postalCodeInput = page.locator('[data-test="postalCode"]');
         this.continueButton = page.locator('[data-test="continue"]');
-        this.finishButton = page.locator('[data-test="finish"]');
+        this.cancelButton = page.locator('[data-test="cancel"]');
     }
 
     async enterFormDetails(){
@@ -28,7 +28,9 @@ export class CheckoutDetailsPage {
         await this.continueButton.click();
     }
 
-    async clickOnFinish(){
-        await this.finishButton.click();
+    async clickOnCancel(){
+        await this.cancelButton.click();
     }
+
+
 }
