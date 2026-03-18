@@ -56,7 +56,7 @@ export class InventoryPage {
     return this.page.locator('[class="inventory_item_price"]').allInnerTexts();
   }
 
-  async sortPricesByCheapest(stringArray: string[]) {
+  async sortPricesByCheapest(stringArray: String[]) {
   return [...stringArray].sort((a, b) => {
     const priceA = parseFloat(a.replace('$', ''));
     const priceB = parseFloat(b.replace('$', ''));
