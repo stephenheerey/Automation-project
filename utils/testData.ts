@@ -1,14 +1,14 @@
 export const users = {
   standard: {
-    username: 'standard_user',
-    password: 'secret_sauce',
+    username: process.env.STANDARD_USERNAME ?? 'standard_user',
+    password: process.env.STANDARD_PASSWORD ?? 'secret_sauce',
   },
   locked: {
-    username: 'locked_out_user',
-    password: 'secret_sauce',
+    username: process.env.LOCKED_USERNAME ?? 'locked_out_user',
+    password: process.env.LOCKED_PASSWORD ?? 'secret_sauce',
   },
   invalid: {
-    username: 'fake_user',
-    password: 'wrong_password',
+    username: process.env.INVALID_USERNAME ?? 'fake_user',
+    password: process.env.INVALID_PASSWORD ?? 'wrong_password',
   },
 };

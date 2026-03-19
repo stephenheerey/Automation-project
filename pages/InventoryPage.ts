@@ -49,11 +49,11 @@ export class InventoryPage {
   }
 
   async getNamesOfItems(){
-    return this.page.locator('[class="inventory_item_name "]').allInnerTexts();
+    return this.page.locator('.inventory_item_name').allInnerTexts();
   }
 
   async getPriceOfItems(){
-    return this.page.locator('[class="inventory_item_price"]').allInnerTexts();
+    return this.page.locator('.inventory_item_price').allInnerTexts();
   }
 
   async sortPricesByCheapest(stringArray: String[]) {

@@ -20,7 +20,7 @@ test.describe('End 2 End', () => {
     await inventoryPage.clickOnCart();
 
     const cartPage = new CartPage(page);
-    cartPage.clickOnCheckout();
+    await cartPage.clickOnCheckout();
 
     const checkoutDetailsPage = new CheckoutDetailsPage(page);
     await checkoutDetailsPage.enterFormDetails();

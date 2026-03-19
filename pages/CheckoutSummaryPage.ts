@@ -29,7 +29,7 @@ export class CheckoutSummaryPage {
     }
 
     async addPriceOfAllItems(){
-        return this.page.locator('[class="inventory_item_price"]').allInnerTexts();
+        return this.page.locator('.inventory_item_price').allInnerTexts();
     }
 
     async totalPrice(){
